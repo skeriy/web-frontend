@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link href="{% static "style.css" %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1 class="title" align="center">Список кинофильмов</h1>
+
+    <div>
+        <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+            <button type="submit">Добавить</button>
+        </form>
+
+
+    </div>
+
+    <div class="div_table" align="center">
+        <table class="table" border="3px">
+    <tr>
+        <td>Film name</td>
+        <td>Release date</td>
+        <td>Director</td>
+        <td>Duration</td>
+        <td>Rating</td>
+
+    </tr>
+        {% for person in query_results %}
+            <tr class="holder">
+                <td> {{person.film_name}} </td>
+                <td>{{person.release_date}}</td>
+                <td>{{person.director}}</td>
+                <td>{{person.duration}}</td>
+                <td>{{person.rating}}</td>
+                <td class="block"><button type="submit">Удалить</button></td>
+
+            </tr>
+    {% endfor %}
+
+        </table>
+
+
+    </div>
+
+
+</body>
+
+</html>
