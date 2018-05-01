@@ -12,12 +12,15 @@
 
 }
 
+tr, td {
+    border: 3px solid darkgrey;
+}
+
 .block{
     position: absolute;
     display:none;
     border: none;
-    margin-right: 2px;
-    margin-left: 2px;
+
     
 }
 .holder:hover{

@@ -10,3 +10,5 @@ class Films(models.Model):
     director = models.CharField(max_length=100)
     duration = models.CharField(max_length=20)
     rating = models.IntegerField(default=1, validators=[MaxValueValidator(10),MinValueValidator(1)])
+
+

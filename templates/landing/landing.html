@@ -16,17 +16,25 @@
     <h1 class="title" align="center">Список кинофильмов</h1>
 
     <div>
-        <form action="" method="post">{% csrf_token %}
-        {{ form.as_p }}
-            <button type="submit">Добавить</button>
+        <form prefix="add" action="" method="post">{% csrf_token %}
+        {{ form_add.as_table }}
+            <button type="submit" name="add_button">Добавить</button>
         </form>
 
+    </div>
+    <div>
+        <form prefix="delete" action="" method="post">
+            {% csrf_token %}
+            {{ form_del }}
+            <input type="submit" name="delete_button" value="Удалить" />
+        </form>
 
     </div>
 
     <div class="div_table" align="center">
         <table class="table" border="3px">
     <tr>
+        <td>id</td>
         <td>Film name</td>
         <td>Release date</td>
         <td>Director</td>
@@ -36,12 +44,12 @@
     </tr>
         {% for person in query_results %}
             <tr class="holder">
+                <td>{{ person.id }}</td>
                 <td> {{person.film_name}} </td>
                 <td>{{person.release_date}}</td>
                 <td>{{person.director}}</td>
                 <td>{{person.duration}}</td>
                 <td>{{person.rating}}</td>
-                <td class="block"><button type="submit">Удалить</button></td>
 
             </tr>
     {% endfor %}
