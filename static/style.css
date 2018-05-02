@@ -1,8 +1,7 @@
 .title{
     color: black;
-    font-family: NSimSun, cursive;
-    background: white;
-    opacity: 0.5;
+    font-family: "Goudy Stout", cursive;
+    background: -webkit-linear-gradient();
 }
 
 .table{
@@ -120,3 +119,4 @@ form label {
 .table_title{
     background: darkgrey;
 }
+
