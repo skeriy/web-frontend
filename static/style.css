@@ -1,7 +1,6 @@
 .title{
     color: black;
     font-family: "Goudy Stout", cursive;
-    background: -webkit-linear-gradient();
 }
 
 .table{
@@ -30,23 +29,23 @@ table td{
 }
 
 form {
-width: 300px; /* задаем ширину формы, чтобы сработал overflow */
-overflow: hidden; /* обрезаем выступы за форму (в частности в ие6 неправильно расчитанный width для div) */
-padding: 2px; /* небольшой отступ чтобы не обрезалась подсветка input в фокусе в Safari и Chrome */
+    width: 300px;
+    overflow: hidden;
+    padding: 2px;
 }
 form p {
-    float: left; /* чтобы не было проблем с отступами между блоками */
-    width: 100%; /* чтобы блоки не встраивались в одну строку */
-    margin-bottom: 2px; /* расстояние между блоками */
+    float: left;
+    width: 100%;
+    margin-bottom: 2px;
     margin-top: 5px;
 }
 form label {
-    float: left; /* делаем метки плавающими и фиксированной ширины чтобы выровнять их по одному уровню */
+    float: left;
     width: 100px;
     text-align: right;
-    position: relative; /* выравниваем тексты меток и полей по одному уровню */
-    margin-top: 0; /* отступ сверху подбираем в зависимости от размера шрифта и дизайна полей */
-    margin-right: 5px; /* чтобы к меткам не прилипали поля */
+    position: relative;
+    margin-top: 0;
+    margin-right: 5px;
     font-family: Tahoma, cursive;
 }
 
@@ -54,12 +53,12 @@ form label {
     width: 300px;
 }
 .del_form label{
-    float: left; /* делаем метки плавающими и фиксированной ширины чтобы выровнять их по одному уровню */
+    float: left;
     width: 70px;
     text-align: right;
-    position: center; /* выравниваем тексты меток и полей по одному уровню */
-    top: 2px; /* отступ сверху подбираем в зависимости от размера шрифта и дизайна полей */
-    margin-right: 5px; /* чтобы к меткам не прилипали поля */
+    position: center;
+    top: 2px;
+    margin-right: 5px; 
 }
 .add_div{
     width: 300px;
