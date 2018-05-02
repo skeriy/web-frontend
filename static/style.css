@@ -100,13 +100,38 @@ form label {
     text-align: center;
     height: 30px;
     width: 80px;
+    background: #50db31;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    font-family: Arial, cursive;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.add_button:hover{
+    background: #5efd5b;
+    text-decoration: none;
 }
 
 .del_button{
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
     height: 30px;
     width: 80px;
+    background: #ff2a2c;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    font-family: Arial, cursive;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.del_button:hover{
+    background: rgb(255, 120, 105);
+    text-decoration: none;
 }
 
 #bg{
