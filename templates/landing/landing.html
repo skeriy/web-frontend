@@ -11,48 +11,61 @@
 
 </head>
 
-<body>
+<body id="bg" style="background-image: url('{% static "img/marvel.png"%}')">
 
-    <h1 class="title" align="center">Список кинофильмов</h1>
+    <h1 class="title" align="center">Films list</h1>
 
-    <div>
-        <form prefix="add" action="" method="post">{% csrf_token %}
-        {{ form_add.as_table }}
-            <button type="submit" name="add_button">Добавить</button>
-        </form>
+    <div class="div_operations">
+
+        <div class="add_div">
+            <div class="div_title"><p align="center">Add record</p></div>
+            <form prefix="add" action="" method="post" class="add_form">{% csrf_token %}
+            {{ form_add.as_p }}
+                <p align="center">
+                <button type="submit" name="add_button" class="add_button">ADD</button>
+                </p>
+            </form>
+        </div>
+
+        <div class="del_div">
+            <div class="div_title"><p align="center">Delete record</p></div>
+            <form prefix="delete" action="" method="post" class="del_form">
+                {% csrf_token %}
+                {{ form_del }}
+                <p align="center">
+                <input class="del_button" type="submit" name="delete_button" value="DELETE"/>
+                </p>
+            </form>
+
+        </div>
 
     </div>
-    <div>
-        <form prefix="delete" action="" method="post">
-            {% csrf_token %}
-            {{ form_del }}
-            <input type="submit" name="delete_button" value="Удалить" />
-        </form>
 
-    </div>
+    <div class="div_table">
 
-    <div class="div_table" align="center">
         <table class="table" border="3px">
-    <tr>
-        <td>id</td>
-        <td>Film name</td>
-        <td>Release date</td>
-        <td>Director</td>
-        <td>Duration</td>
-        <td>Rating</td>
 
-    </tr>
-        {% for person in query_results %}
-            <tr class="holder">
-                <td>{{ person.id }}</td>
-                <td> {{person.film_name}} </td>
-                <td>{{person.release_date}}</td>
-                <td>{{person.director}}</td>
-                <td>{{person.duration}}</td>
-                <td>{{person.rating}}</td>
+            <tr class="table_title">
+
+                <td>id</td>
+                <td>Film name</td>
+                <td>Release date</td>
+                <td>Director</td>
+                <td>Duration</td>
+                <td>Rating</td>
 
             </tr>
-    {% endfor %}
+            {% for person in query_results %}
+
+                <tr class="holder">
+                        <td>{{ person.id }}</td>
+                        <td> {{person.film_name}} </td>
+                        <td>{{person.release_date}}</td>
+                        <td>{{person.director}}</td>
+                        <td>{{person.duration}}</td>
+                        <td>{{person.rating}}</td>
+                </tr>
+                {% endfor %}
 
         </table>
 

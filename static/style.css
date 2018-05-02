@@ -1,32 +1,122 @@
 .title{
-    color:firebrick;
+    color: black;
+    font-family: NSimSun, cursive;
+    background: white;
+    opacity: 0.5;
 }
 
 .table{
     border: 2px solid black;
     border-collapse: collapse;
     width: 800px;
+    background: ghostwhite;
+    opacity: 0.95;
+    color: black;
+    font-family: "Comic Sans MS", cursive;
 }
 
-.div_table{
+table td{
+    border: 2px solid darkgrey;
+    text-align: center;
+    vertical-align: center;
+    height: 30px;
+    margin-inside: 10px;
 
-}
-
-tr, td {
-    border: 3px solid darkgrey;
 }
 
 .block{
     position: absolute;
     display:none;
     border: none;
-
-    
-}
-.holder:hover{
-    background: bisque;
 }
 
-.holder:hover .block{
-    display: block;
+form {
+width: 300px; /* задаем ширину формы, чтобы сработал overflow */
+overflow: hidden; /* обрезаем выступы за форму (в частности в ие6 неправильно расчитанный width для div) */
+padding: 2px; /* небольшой отступ чтобы не обрезалась подсветка input в фокусе в Safari и Chrome */
+}
+form p {
+    float: left; /* чтобы не было проблем с отступами между блоками */
+    width: 100%; /* чтобы блоки не встраивались в одну строку */
+    margin-bottom: 2px; /* расстояние между блоками */
+    margin-top: 5px;
+}
+form label {
+    float: left; /* делаем метки плавающими и фиксированной ширины чтобы выровнять их по одному уровню */
+    width: 100px;
+    text-align: right;
+    position: relative; /* выравниваем тексты меток и полей по одному уровню */
+    margin-top: 0; /* отступ сверху подбираем в зависимости от размера шрифта и дизайна полей */
+    margin-right: 5px; /* чтобы к меткам не прилипали поля */
+    font-family: Tahoma, cursive;
+}
+
+.del_form{
+    width: 300px;
+}
+.del_form label{
+    float: left; /* делаем метки плавающими и фиксированной ширины чтобы выровнять их по одному уровню */
+    width: 70px;
+    text-align: right;
+    position: center; /* выравниваем тексты меток и полей по одному уровню */
+    top: 2px; /* отступ сверху подбираем в зависимости от размера шрифта и дизайна полей */
+    margin-right: 5px; /* чтобы к меткам не прилипали поля */
+}
+.add_div{
+    width: 300px;
+    background: rgba(70, 72, 143, 0.72);
+    alignment: center;
+    color: white;
+}
+
+.add_div p{
+    margin-top: 0;
+}
+.del_div{
+    width: 300px;
+    background: rgba(70, 72, 143, 0.72);
+    alignment: center;
+    color: white;
+}
+
+.div_title{
+    font-family: Jokerman, sans-serif;
+}
+
+.div_table{
+    float: left;
+    position: relative;
+
+}
+
+.div_operations{
+    width: 325px;
+    float: left;
+    margin-left: 25px;
+}
+
+.add_button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 30px;
+    width: 80px;
+}
+
+.del_button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 80px;
+}
+
+#bg{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.table_title{
+    background: darkgrey;
 }
