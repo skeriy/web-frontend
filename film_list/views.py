@@ -18,10 +18,7 @@ def landing(request):
             form_add = ListFilmsForm(request.POST)
             if form_add.is_valid():
                 form_add.save()
-                print(request.POST)
-                print(form_add.cleaned_data)
                 data = form_add.cleaned_data
-                print(data["director"])
                 print('post add')
         elif 'delete_button' in request.POST:
             form_del = FilmsDel(request.POST)
